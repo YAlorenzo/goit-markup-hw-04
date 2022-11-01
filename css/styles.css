@@ -7,6 +7,7 @@
     --bg-color:#2F303A;
     --head-color:#212121;
     --bgwhite-color:#F5F4FA;
+    --icon-color: #AFB1B8;
 }
 
 
@@ -53,7 +54,7 @@ address {
  }
  .link {
     text-decoration: none;
-    // color: inherit;
+     color: inherit;
  }
 footer{
     background: var(--bg-color);
@@ -111,7 +112,19 @@ span{
 
  .contact-header{
     color: var(--inform-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+    display: block;
  } 
+ .contact-header:hover{
+    color: var(--psevdo-color);
+ }
+ .contact-header:hover .icon-header{
+    fill: var(--psevdo-color);
+ }
 
  .logo-header{
     font-family: 'Raleway', sans-serif;
@@ -125,8 +138,6 @@ span{
  .header {
     display: flex;
     align-items: center;
-    /* padding-top: 25px ;
-    padding-bottom: 25px; */
   }
   .nav-header {
     margin-left: 93px;
@@ -145,18 +156,22 @@ span{
  .contact-list .contact:not(:last-child) {
     margin-right: 50px;
  }
-
+ .icon-header {
+    fill: var(--inform-color);
+    align-self: center;
+    margin-right: 10px;
+ }
+ .contact {
+    display: flex;
+ }
+ 
  /* ----- */
 
 
 
 
  /* main-studia */
- .header-main{
-    text-align: center;
-    background: var(--bg-color);
-    padding: 200px 0;
-}
+ 
 .hero-title{
     font-weight: 900;
     font-size: 44px;
@@ -189,8 +204,6 @@ span{
 }
 .list-perevag {
     display: flex;
-}
-.list-perevag-li {
 }
 .h3-delta {
     margin: 0px 0px 10px 0px;
@@ -282,7 +295,92 @@ span{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.header-main {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:linear-gradient(to right, rgba(47,48,58,0.4),rgba(47,48,58,0.4)), url(../images/imghero.jpg);
+    text-align: center;
+    padding: 200px;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+.container-icon-perevag{
+    width: 270px;
+    background-color: var(--bgwhite-color);
+    padding: 25px 102px;
+    margin-bottom: 30px;
+    
+}
+.link-team {
+    display: block;
+    width: 44px;
+    height: 44px; 
+    background-color: var(--white-color);
+    padding: 12px; 
+    border-radius: 50px;
+    }
+    .link-team:hover{
+        background-color: var(--psevdo-color);
+    }
+    .link-team:hover .team-icon {
+        fill: var(--white-color);
+    }
+  
+.actions-li:not(:last-child) {
+    margin-right: 10px;
+}
+.team-icon {
+  fill: var(--icon-color);
+ 
+}
 
+.actions {
+    display: flex;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.header-klient{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--head-color);
+    margin: 0px 0px 50px 0px;
+
+}
+.section-klient {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.klient-list{
+    display: flex;
+}
+.klient-li:not(:last-child){
+    margin-right: 30px;
+}
+.klient-link {
+    display: block;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    padding: 16px 32px;
+
+}
+.icon-klient{
+    fill: var(--icon-color);
+}
+.klient-link:hover{
+    border: 1px solid var(--psevdo-color);
+}
+.klient-link:hover .icon-klient {
+    fill: var(--psevdo-color);
+}
 
 
 /* ------ */
@@ -291,7 +389,8 @@ span{
  /* main-portfolio */
 
  .nav-button:hover,
- .nav-button:focus{
+ .nav-button:focus {
+
     background-color: var(--psevdo-color);
     color: var(--white-color);
 }
@@ -311,11 +410,7 @@ span{
 }
 
  .portfolio {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 94px;
-    margin-top: 94px; 
-     /* padding: 94px 0; */
+    padding: 94px 0;
  }
 
 
@@ -337,7 +432,7 @@ span{
  }
  .portfolio-li {
     width: 370px;
-    border: 1px solid #EEEEEE;
+    
  }
  
  .h-li{
@@ -359,6 +454,8 @@ span{
 } 
 .info-portfolio {
     padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
 /* -------- */
 
@@ -379,7 +476,6 @@ span{
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-
 }
 .logo-footer{
     font-family: 'Raleway', sans-serif;
@@ -404,5 +500,42 @@ span{
     line-height: 1.71;
     letter-spacing: 0.02em;
  }
- 
+ .footer-box {
+    display: flex;
+ } 
+ .footer-container_2 {
+    margin-top: 15px ;
+    margin-bottom: 37px;
+    margin-left: 70px;
+    position: relative;
+ }
+.h5-footer {
+    width: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    color: var(--white-color);
+    letter-spacing: 0.02em;
+
+}
+.actions-footer {
+    display: flex;
+    margin-top: 20px;
+}
+.actions-li-footer:not(:last-child) {
+   margin-right: 10px;
+}
+.link-footer {
+    display: block;
+    width: 44px;
+    height: 44px; 
+    background-color:  rgba(255, 255, 255, 0.1);
+    padding: 12px; 
+    border-radius: 50px;
+}
+.twitter {
+    background-color: var(--psevdo-color);
+}
+.team-icon-footer {
+    fill: var(--white-color);
+}
  /* --------- */
